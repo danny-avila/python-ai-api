@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  ai_api:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      - .:/app
+    command: ["python", "app.py"]
