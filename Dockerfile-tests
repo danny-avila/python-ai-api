@@ -9,4 +9,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD [ "python", "-m", "unittest", "discover", "tests" ]
+CMD [ "python", "-m", "unittest", "tests/test_api.py" ]

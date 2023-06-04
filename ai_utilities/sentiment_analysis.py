@@ -1,3 +1,4 @@
+# ai_utilities/sentiment_analysis.py
 import openai
 
 def sentiment_analysis(text, api_key):
@@ -13,8 +14,11 @@ def sentiment_analysis(text, api_key):
             temperature=0.5,
         )
 
+        print("completion response", response)
+
         sentiment = response.choices[0].text.strip()
         return sentiment
 
     except Exception as e:
+        print("completion exception", e)
         return str(e)

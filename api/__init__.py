@@ -1,5 +1,3 @@
-from flask import Blueprint
+from .routes.ask import ask_blueprint
 
-api = Blueprint("api", __name__)
-
-from . import routes
+api_blueprints = [ask_blueprint]

@@ -11,4 +11,4 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
     volumes:
       - .:/app
-    command: ["python", "app.py"]
+    command: [ "python", "-m", "unittest", "tests/test_api.py" ]
